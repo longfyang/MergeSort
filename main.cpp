@@ -69,15 +69,12 @@ void mergesort(int a[], int len){
 }
 
 bool sorted (int a[], int len){
-	for (int i = 0; i < len; i++){
-	   if (a[i] < a[i + 1]){
-	      i++;
-	   }
-	   return true;
-	   
+	for (int i = 0; i < len - 1; i++) {
+		if (a[i] > a[i +1]) {
+			return false;
+		}
 	}
-
-	return false;
+	return true;
 }
 
 
